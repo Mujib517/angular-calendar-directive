@@ -3,10 +3,7 @@
 <h3>How to consume:</h3>
 
 step 1:
-
-"<div class="col-lg-2">
-    <my-calendar month="06" year="2014" on-select="selected(dt)"></my-calendar>
-</div>"
+    &lt;my-calendar month="06" year="2014" on-select="selected(dt)"&gt;&lt;/my-calendar&gt;
 
 step2: <b> In your controller add dependency as shown</b>
 
