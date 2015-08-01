@@ -1,0 +1,97 @@
+<style>
+    .selected {
+        background-color: #EEEEEE;
+    }
+
+    .cursor-hand {
+        cursor: pointer;
+        cursor: hand;
+    }
+
+    .today {
+        background-color: #F8F8F8;
+    }
+
+    .btn-width {
+        width: 80px;
+    }
+
+    .input-xs {
+        height: 22px;
+        padding: 2px 5px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: 3px;
+    }
+</style>
+<div ng-show="!yearMode">
+    <!--<div class="pull-left">-->
+        <!--<h4> {{date}} </h4>-->
+    <!--</div>-->
+    <table class="table table-bordered table-condensed">
+        <tr>
+            <td colspan="2">
+                <div class="pull-left">
+                    <select class="form-control input-xs" ng-model="month" ng-options="month for month in months"
+                            ng-change="changeMonth(month)">
+                    </select>
+                </div>
+            </td>
+            <td colspan="2">
+                <div class="pull-left">
+                    <button class="btn btn-xs btn-width btn-primary" ng-click="showYears(year)">
+                        <span>{{year}}</span>
+                    </button>
+                </div>
+            </td>
+            <td colspan="3">
+                <div class="btn-group pull-right">
+                    <button class="btn btn-sm btn-default btn-xs" type="button" ng-click="prev()">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </button>
+                    <button class="btn btn-sm btn-default btn-xs" type="button" ng-click="next()">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+        </tr>
+        <tr ng-repeat="week in weeks">
+            <td id='{{day}}' class="cursor-hand" ng-repeat="day in week track by $index" ng-click="selectDate(day)">
+                {{day}}
+            </td>
+        </tr>
+    </table>
+</div>
+<div ng-show="yearMode">
+    <table class="table table-bordered table-condensed">
+        <tr>
+            <th colspan="7">
+                Select Year
+                <div class="btn-group pull-right">
+                    <button class="btn btn-sm btn-default btn-xs" type="button" ng-click="prevYear()">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </button>
+                    <button class="btn btn-sm btn-default btn-xs" type="button" ng-click="nextYear()">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </button>
+                </div>
+            </th>
+        </tr>
+        <tr ng-repeat="year in years">
+            <td ng-repeat="yr in year">
+                <button class="btn btn-default btn-xs" ng-click="changeYear(yr)">
+                    <span>{{yr}}</span>
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>

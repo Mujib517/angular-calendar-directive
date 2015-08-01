@@ -1,0 +1,24 @@
+{
+  "name": "CalendarControl",
+  "version": "0.0.1",
+  "description": "Full calendar control ",
+  "main": "calendarControl.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Calendar",
+    "Weekly Calendar",
+    "Monthly Calendar",
+    "Full Calendar",
+    "Calendar Control",
+    "Calendar for Angular"
+  ],
+  "author": "Mujib",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-common-html2js": "^0.3.5",
+    "grunt-contrib-concat": "^0.5.1"
+  }
+}

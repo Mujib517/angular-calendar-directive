@@ -1,0 +1,30 @@
+{
+  "name": "CalendarControl",
+  "version": "0.0.1",
+  "authors": [
+    "Mujib"
+  ],
+  "description": "Full calendar control",
+  "main": "calendarControl.js",
+  "keywords": [
+    "Calendar",
+    "Weekly Calendar",
+    "Monthly Calendar",
+    "Full Calendar",
+    "Calendar Control"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angular": "~1.4.3",
+    "bootstrap": "~3.3.5",
+    "angular-mocks": "~1.4.3"
+  }
+}
