@@ -2,7 +2,7 @@
 
 <h3>How to consume:</h3>
 
-step 1:
+step 1:  Add below tag in your view
     &lt;my-calendar month="06" year="2014" on-select="selected(dt)"&gt;&lt;/my-calendar&gt;
 
 step2: <b> In your controller add dependency as shown</b>
