@@ -5,7 +5,7 @@
     "Mujib"
   ],
   "description": "Full calendar control",
-  "main": "calendarControl.js",
+  "main": ["dist/*.js"],
   "keywords": [
     "Calendar",
     "Weekly Calendar",
