@@ -10,7 +10,9 @@ module.exports = function(grunt) {
                 dest: 'temp/templates.js'
             }
         },
-
+        jshint:{
+            myFiles: ['directive/*.js']
+        },
         concat: {
             options: {
                 separator: ';',
@@ -36,6 +38,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-common-html2js');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-
-    grunt.registerTask('release', ['html2js','concat','uglify']);
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.registerTask('release', ['jshint','html2js','concat','uglify']);
 };

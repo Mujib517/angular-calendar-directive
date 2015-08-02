@@ -2,16 +2,20 @@
 
 <h3>How to consume:</h3>
 
-step 1:  Add below tag in your view
-    &lt;my-calendar month="06" year="2014" on-select="selected(dt)"&gt;&lt;/my-calendar&gt;
+step 1:
 
-step2: <b> In your controller add dependency as shown</b>
+<div class="col-lg-2">
+    <my-calendar month="06" year="2014" on-select="selected(dt)"></my-calendar>
+</div>
+
+
+step2: In your controller add dependency as shown
 
 var myApp=angular.module('myApp',['calendarControl']);
 
 myApp.controller('myController',function($scope){
 
-  //catch the selected date using callback function<br>
+  //catch the selected date using callback function
   $scope.selected=function(dt){
     console.log(dt); //returns selected date.
   };
