@@ -258,7 +258,6 @@ app.directive('myCalendar', function () {
     "    .btn-width {\n" +
     "        width: 80px;\n" +
     "    }\n" +
-    "\n" +
     "    .input-xs {\n" +
     "        height: 22px;\n" +
     "        padding: 2px 5px;\n" +
