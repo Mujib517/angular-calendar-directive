@@ -6,12 +6,14 @@
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
   <script src="bower_components/angular/angular.min.js"></script>
+
   <script src="script.js"></script>
   <script src="directive/calendarControl.js"></script>
   <!--<script src="dist/calendar.min.js"></script>-->
 </head>
+
 <body ng-controller="myController">
-  <div class="col-md-3">
+  <div class="col-lg-3">
     <my-calendar  date="date" on-select="selected(dt)" config="config1"></my-calendar>
   </div>
 </body>
