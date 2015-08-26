@@ -3,7 +3,7 @@ var app = angular.module('calendarControl', []);
 app.directive('myCalendar', function () {
     return {
         restrict: "E",
-        templateUrl: "/Calendar-Directive/directive/template.html",
+        templateUrl: "/angular-Calendar-Directive/directive/template.html",
         scope: {
             month: "=",
             year: "=",
@@ -39,7 +39,7 @@ app.directive('myCalendar', function () {
                     var y = parseInt(dt[2]);
 
                     if (month == m && year == y) {
-                        scope.$apply();
+                        scope.$digest();
                         $('#' + d).removeClass('today');
                         $('#' + d).addClass('selected');
                     }
@@ -143,14 +143,14 @@ app.directive('myCalendar', function () {
                 }
 
                 if (month == ctMonth && year == ctYear) {
-                    scope.$apply();
+                    scope.$digest();
                     $('#' + ctDt).addClass('today');
                 }
             };
 
             var showSelection = function () {
                 if (scope.date) {
-                    scope.$apply();
+                    scope.$digest();
                     var date = scope.date.split('/');
                     $('#' + parseInt(date[1])).removeClass('today');
                     $('#' + parseInt(date[1])).addClass('selected');
@@ -212,7 +212,7 @@ app.directive('myCalendar', function () {
                     }
                     years.reverse();
                     loadYears();
-                    scope.$apply();
+                    scope.$digest();
                 }
             };
 
@@ -225,7 +225,7 @@ app.directive('myCalendar', function () {
                         years.push(i);
                     }
                     loadYears();
-                    scope.$apply();
+                    scope.$digest();
                 }
             };
 
